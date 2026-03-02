@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import SectionTitle from "@/components/SectionTitle";
 import { CalendarCheck } from "lucide-react";
+import fotoSobre from "@/assets/foto-sobre.jpeg";
 
 const timeline = [
   { year: "2014–2019", text: "Graduação em Medicina – Faculdade de Medicina de Jundiaí" },
@@ -14,18 +15,30 @@ const Sobre = () => (
   <main className="pt-24">
     {/* Bio */}
     <section className="py-20">
-      <div className="container mx-auto px-4 max-w-3xl">
+      <div className="container mx-auto px-4 max-w-4xl">
         <SectionTitle title="Sobre Mim" />
-        <p className="text-foreground leading-relaxed mb-6">
-          Sou médica nefrologista com formação pelo Hospital Israelita Albert Einstein e título de
-          especialista pela Sociedade Brasileira de Nefrologia. Minha prática combina rigor científico
-          com um olhar acolhedor, focando em prevenção e tratamento personalizado das doenças renais
-          e condições clínicas.
-        </p>
-        <p className="text-foreground leading-relaxed">
-          Acredito que a medicina mais eficaz é aquela que coloca o paciente no centro, compreendendo
-          seu contexto de vida para oferecer orientações claras e baseadas em evidência.
-        </p>
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          <div className="shrink-0">
+            <img
+              src={fotoSobre}
+              alt="Dra. Beatriz Romanini no Hospital Albert Einstein"
+              className="w-56 md:w-64 rounded-2xl shadow-md object-cover aspect-[3/4]"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p className="text-foreground leading-relaxed mb-6">
+              Sou médica nefrologista com formação pelo Hospital Israelita Albert Einstein e título de
+              especialista pela Sociedade Brasileira de Nefrologia. Minha prática combina rigor científico
+              com um olhar acolhedor, focando em prevenção e tratamento personalizado das doenças renais
+              e condições clínicas.
+            </p>
+            <p className="text-foreground leading-relaxed">
+              Acredito que a medicina mais eficaz é aquela que coloca o paciente no centro, compreendendo
+              seu contexto de vida para oferecer orientações claras e baseadas em evidência.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 

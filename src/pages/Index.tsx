@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Heart, ShieldCheck, Brain, Microscope, MessageCircle, CalendarCheck } from "lucide-react";
 import heroBg from "@/assets/hero-bg.png";
+import fotoHero from "@/assets/foto-hero.jpeg";
 import SectionTitle from "@/components/SectionTitle";
 
 const areas = [
@@ -35,34 +36,47 @@ const Index = () => {
           className="absolute inset-0 w-full h-full object-cover opacity-30"
           loading="eager"
         />
-        <div className="relative z-10 container mx-auto px-4 py-32 lg:py-40">
-          <div className="max-w-2xl animate-fade-in">
-            <p className="text-accent font-sans text-sm font-semibold uppercase tracking-widest mb-4">
-              Nefrologia · Clínica Médica
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight mb-6">
-              Beatriz Romanini
-            </h1>
-            <p className="text-foreground/80 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
-              Medicina baseada em evidência com olhar humano e preventivo.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/contato"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md bg-accent text-accent-foreground font-sans font-medium text-sm hover:opacity-90 transition-opacity"
-              >
-                <CalendarCheck size={18} />
-                Agendar consulta
-              </Link>
-              <a
-                href="https://wa.me/55119700842045"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md border border-primary text-primary font-sans font-medium text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                <MessageCircle size={18} />
-                Falar no WhatsApp
-              </a>
+        <div className="relative z-10 container mx-auto px-4 py-24 lg:py-36">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div className="max-w-xl animate-fade-in">
+              <p className="text-accent font-sans text-sm font-semibold uppercase tracking-widest mb-4">
+                Nefrologia · Clínica Médica
+              </p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight mb-6">
+                Beatriz Romanini
+              </h1>
+              <p className="text-foreground/80 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
+                Medicina baseada em evidência com olhar humano e preventivo.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/contato"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md bg-accent text-accent-foreground font-sans font-medium text-sm hover:opacity-90 transition-opacity"
+                >
+                  <CalendarCheck size={18} />
+                  Agendar consulta
+                </Link>
+                <a
+                  href="https://wa.me/5511970084204"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md border border-primary text-primary font-sans font-medium text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
+                  <MessageCircle size={18} />
+                  Falar no WhatsApp
+                </a>
+              </div>
+            </div>
+            <div className="shrink-0 animate-fade-in" style={{ animationDelay: "200ms" }}>
+              <div className="relative">
+                <div className="absolute -inset-3 rounded-[2rem] bg-accent/10 blur-xl" />
+                <img
+                  src={fotoHero}
+                  alt="Dra. Beatriz Romanini – Nefrologista"
+                  className="relative w-64 md:w-72 lg:w-80 rounded-[1.5rem] shadow-lg object-cover aspect-[3/4]"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
         </div>

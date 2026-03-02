@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MessageCircle, Send } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
 import { toast } from "sonner";
+import fotoContato from "@/assets/foto-contato.jpeg";
 
 const Contato = () => {
   const [form, setForm] = useState({ nome: "", email: "", cidade: "", mensagem: "" });
@@ -15,8 +16,18 @@ const Contato = () => {
   return (
     <main className="pt-24">
       <section className="py-20">
-        <div className="container mx-auto px-4 max-w-xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <SectionTitle title="Contato" subtitle="Entre em contato para agendar sua consulta." />
+          <div className="flex flex-col md:flex-row gap-10 items-start">
+            <div className="hidden md:block shrink-0">
+              <img
+                src={fotoContato}
+                alt="Dra. Beatriz Romanini"
+                className="w-52 rounded-2xl shadow-md object-cover aspect-[3/4] sticky top-28"
+                loading="lazy"
+              />
+            </div>
+            <div className="flex-1 max-w-xl">
 
           <form onSubmit={handleSubmit} className="space-y-5">
             {[
@@ -74,6 +85,8 @@ const Contato = () => {
             Este canal não deve ser utilizado para urgências médicas.<br />
             Em caso de emergência, procure atendimento imediato.
           </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
