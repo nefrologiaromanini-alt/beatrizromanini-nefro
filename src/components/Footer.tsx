@@ -8,8 +8,18 @@ const Footer = () => (
           <h3 className="text-primary-foreground text-lg font-semibold mb-3">Dra. Beatriz Romanini</h3>
           <p className="text-primary-foreground/70 text-sm leading-relaxed">
             Nefrologia e Clínica Médica<br />
-            CRM-SP 000000 · RQE 00000
+            CRM-SP 207270 · RQE 139795 · RQE 125772
           </p>
+          <div className="mt-3">
+            <a
+              href="https://instagram.com/beatrizromanini.nefro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors"
+            >
+              @beatrizromanini.nefro
+            </a>
+          </div>
         </div>
         <div>
           <h4 className="text-primary-foreground text-sm font-semibold mb-3 font-sans uppercase tracking-wider">Navegação</h4>
