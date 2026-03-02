@@ -54,7 +54,7 @@ const Index = () => {
                 Agendar consulta
               </Link>
               <a
-                href="https://wa.me/5500000000000"
+                href="https://wa.me/55119700842045"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md border border-primary text-primary font-sans font-medium text-sm hover:bg-primary hover:text-primary-foreground transition-colors"

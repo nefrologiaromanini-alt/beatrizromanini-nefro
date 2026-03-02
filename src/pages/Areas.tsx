@@ -43,6 +43,27 @@ const areas = [
     when: "Diagnóstico de diabetes, alterações em exames de função renal, proteinúria.",
     how: "Monitoramento renal, controle glicêmico integrado e estratégias de nefroproteção.",
   },
+  {
+    id: "eletrolitos",
+    title: "Alterações de Eletrólitos e Equilíbrio Ácido-Base",
+    what: "Distúrbios nos níveis de sódio, potássio, cálcio, fósforo ou no equilíbrio ácido-base, que podem afetar diversas funções do organismo.",
+    when: "Alterações laboratoriais persistentes, câimbras frequentes, fraqueza muscular, arritmias ou sintomas inexplicados.",
+    how: "Investigação detalhada das causas, correção orientada e acompanhamento para prevenir recorrências.",
+  },
+  {
+    id: "proteinuria-hematuria",
+    title: "Investigação de Proteinúria e Hematúria (Glomerulopatias)",
+    what: "Presença de proteína ou sangue na urina pode indicar doenças glomerulares que requerem investigação especializada.",
+    when: "Exames de urina alterados, edema, urina espumosa, perda de proteína detectada em exames laboratoriais.",
+    how: "Avaliação clínica e laboratorial completa, com investigação direcionada para identificar a causa e definir o melhor tratamento.",
+  },
+  {
+    id: "creatinina-elevada",
+    title: "Avaliação de Creatinina Elevada",
+    what: "A creatinina elevada é um marcador de alteração na função renal que exige avaliação especializada para determinar a causa e a gravidade.",
+    when: "Exame de sangue com creatinina acima do normal, mesmo sem sintomas aparentes.",
+    how: "Investigação completa para diferenciar causas agudas e crônicas, com plano de acompanhamento individualizado.",
+  },
 ];
 
 const Areas = () => (
