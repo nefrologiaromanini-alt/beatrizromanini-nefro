@@ -15,6 +15,7 @@ const timeline = [
   { year: "2021–2023", text: "Residência em Clínica Médica – Irmandade Santa Casa de Misericórdia de São Paulo" },
   { year: "2023–2025", text: "Residência em Nefrologia – Hospital Israelita Albert Einstein" },
   { year: "2025", text: "Título de Especialista – Sociedade Brasileira de Nefrologia" },
+  { year: "2026–", text: "Mestrado em andamento – Hospital Israelita Albert Einstein" },
 ];
 
 const diferenciais = [
