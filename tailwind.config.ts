@@ -18,6 +18,12 @@ export default {
         sans: ["Inter", "sans-serif"],
       },
       colors: {
+        editorial: {
+          blue: "hsl(var(--editorial-blue))",
+          background: "hsl(var(--editorial-background))",
+          text: "hsl(var(--editorial-text))",
+          lilac: "hsl(var(--editorial-lilac))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

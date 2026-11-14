@@ -36,6 +36,10 @@
     --radius: 0.5rem;
 
     /* Custom tokens */
+    --editorial-blue: 207.5 40.4% 34.9%; /* #355C7D */
+    --editorial-background: 40 30% 96.1%; /* #F8F6F2 */
+    --editorial-text: 214.3 7.6% 36.1%; /* #555B63 */
+    --editorial-lilac: 279.7 17.5% 62%; /* #A48DAF */
     --purple-deep: 270 22% 44%; /* #6e568a */
     --blue-gray: 232 20% 28%; /* #3a3f57 */
     --blue-deep: 240 65% 8%; /* #080820 */

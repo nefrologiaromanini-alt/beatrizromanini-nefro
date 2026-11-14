@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Heart, ShieldCheck, Brain, Microscope, MapPin } from "lucide-react";
-import heroBg from "@/assets/hero-bg.png";
 import fotoHero from "@/assets/foto-hero.jpeg";
 import SectionTitle from "@/components/SectionTitle";
 import AppointmentButton from "@/components/AppointmentButton";
@@ -33,45 +32,38 @@ const Index = () => {
   return (
     <main>
       {/* Hero */}
-      <section className="relative flex items-center overflow-hidden pt-20">
-        <img
-          src={heroBg}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-          loading="eager"
-        />
-        <div className="relative z-10 container mx-auto px-4 py-10 md:py-16 lg:py-20">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16">
+      <section id="apresentacao" className="bg-editorial-background pt-20">
+        <div className="container mx-auto max-w-6xl px-4 py-10 md:py-14 lg:py-16">
+          <div className="grid md:grid-cols-[minmax(0,1fr)_auto] items-center gap-8 md:gap-12 lg:gap-20">
             <div className="max-w-xl animate-fade-in">
-              <p className="text-accent font-sans text-sm font-semibold uppercase tracking-widest mb-4">
+              <p className="text-editorial-text font-sans text-xs font-medium mb-5">
                 Nefrologista em Rio Verde – GO
               </p>
-              <h1 className="text-4xl lg:text-5xl font-serif font-bold text-primary leading-tight mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-editorial-blue leading-tight mb-5">
                 {professional.name}
               </h1>
-              <div className="text-sm text-primary leading-relaxed mb-5">
+              <div className="text-xs text-editorial-text leading-relaxed mb-5">
                 <p className="font-semibold">{professional.crm}</p>
                 <p>Clínica Médica — RQE {professional.specialties[0].rqe}</p>
                 <p>Nefrologia — RQE {professional.specialties[1].rqe}</p>
               </div>
-              <p className="text-foreground/80 text-lg lg:text-xl leading-relaxed mb-6 max-w-lg">
+              <p className="text-editorial-text text-base leading-relaxed mb-7 max-w-md">
                 Medicina baseada em evidência com olhar humano e preventivo.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <AppointmentButton />
-                <Button asChild variant="outline" size="lg" className="border-primary text-primary">
-                  <a href="#onde-atender"><MapPin aria-hidden="true" />Local de Atendimentos</a>
+              <div className="flex flex-wrap items-center gap-3">
+                <AppointmentButton compact />
+                <Button asChild variant="outline" size="lg" className="h-11 px-4 rounded-lg text-xs border-border bg-transparent text-editorial-blue hover:bg-card">
+                  <a href="#onde-atender"><MapPin className="text-editorial-lilac" aria-hidden="true" />Localização</a>
                 </Button>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground">{professional.clinic} · {professional.city} – {professional.state}</p>
+              <p className="mt-5 text-xs text-editorial-text">{professional.clinic} · {professional.city} – {professional.state}</p>
             </div>
-            <div className="shrink-0 animate-fade-in" style={{ animationDelay: "200ms" }}>
-              <div className="relative">
-                <div className="absolute -inset-3 rounded-[2rem] bg-accent/10 blur-xl" />
+            <div className="justify-self-center animate-fade-in">
+              <div>
                 <img
                   src={fotoHero}
                    alt="Dra. Beatriz Romanini Fernandes – Nefrologista em Rio Verde – GO"
-                   className="relative w-56 md:w-60 lg:w-72 rounded-[1.5rem] shadow-lg object-cover aspect-[3/4]"
+                   className="w-52 md:w-60 lg:w-64 rounded-lg object-cover object-top aspect-[3/4]"
                   loading="eager"
                 />
               </div>
