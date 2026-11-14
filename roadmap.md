@@ -1,6 +1,6 @@
 # Site update
-- [ ] Refine only initial presentation and clinic location composition, preserving medical content and links.
-- [ ] Show desktop and mobile previews before publishing; Maps live rendering remains outside sandbox verification.
+- [x] Refine only initial presentation and clinic location composition, preserving medical content and links.
+- [x] Capture and provide desktop and mobile previews before publishing; Maps live rendering remains outside sandbox verification. Not published.
 - [x] Rename location section and make displayed appointment WhatsApp numbers clickable; verified link targets and clickability. Maps rendering cannot be checked in the sandbox; external sites may be blocked by the editor preview.
 - [x] Replace professional identity and contact details throughout all pages.
 - [x] Unify appointment links and add accessible mobile WhatsApp access.
