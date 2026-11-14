@@ -27,7 +27,6 @@ const Contato = () => {
             <h2 className="text-2xl font-semibold">Agendamento de consultas</h2>
             <p className="text-foreground">{professional.clinic} · Rio Verde – GO</p>
             <AppointmentButton className="w-full" />
-            <a href={professional.appointmentUrl} target="_blank" rel="noopener noreferrer" className="block py-2 text-sm text-primary text-center underline underline-offset-4 hover:text-accent">WhatsApp: {professional.whatsapp}</a>
             <Button asChild variant="outline" size="lg" className="w-full border-primary text-primary"><a href={professional.phoneHref}><Phone aria-hidden="true" />{professional.phone}</a></Button>
             <a href={professional.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary text-sm hover:underline"><Instagram size={18} aria-hidden="true" />{professional.instagram}</a>
           </div>

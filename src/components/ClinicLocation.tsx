@@ -18,7 +18,6 @@ const ClinicLocation = () => {
               <div>{professional.street}<br />{professional.neighborhood}<br />{professional.city} – {professional.state}<br />CEP {professional.postalCode}</div>
             </address>
             <a href={professional.phoneHref} className="inline-flex items-center gap-3 text-primary hover:underline"><Phone size={18} aria-hidden="true" />{professional.phone}</a>
-            <a href={professional.appointmentUrl} target="_blank" rel="noopener noreferrer" className="block w-fit py-2 text-sm text-primary underline underline-offset-4 hover:text-accent">WhatsApp para agendamentos: {professional.whatsapp}</a>
             <div className="flex flex-col sm:flex-row gap-3">
               <AppointmentButton />
               <Button asChild variant="outline" size="lg" className="border-primary text-primary">
