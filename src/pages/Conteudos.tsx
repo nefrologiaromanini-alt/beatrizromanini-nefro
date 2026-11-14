@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SectionTitle from "@/components/SectionTitle";
+import Seo from "@/components/Seo";
 
 const categories = ["Todos", "Nefrologia", "Prevenção", "Qualidade de Vida"];
 
@@ -40,9 +41,12 @@ const Conteudos = () => {
 
   return (
     <main className="pt-24">
+      <Seo path="/conteudos" />
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <SectionTitle
+            as="h1"
             title="Conteúdos"
             subtitle="Artigos educativos sobre saúde renal, prevenção e bem-estar."
           />
@@ -69,14 +73,14 @@ const Conteudos = () => {
             {filtered.map((article) => (
               <article
                 key={article.id}
-                className="bg-card rounded-lg p-6 border border-border shadow-sm hover:shadow-md hover:border-accent/40 transition-all cursor-pointer"
+                className="bg-card rounded-lg p-6 border border-border shadow-sm hover:shadow-md hover:border-accent/40 transition-all"
               >
                 <span className="text-accent text-xs font-sans font-semibold uppercase tracking-wider">
                   {article.category}
                 </span>
-                <h3 className="text-primary text-lg font-serif font-semibold mt-2 mb-2">
+                <h2 className="text-primary text-lg font-serif font-semibold mt-2 mb-2">
                   {article.title}
-                </h3>
+                </h2>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                   {article.excerpt}
                 </p>

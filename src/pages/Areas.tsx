@@ -1,4 +1,5 @@
 import SectionTitle from "@/components/SectionTitle";
+import Seo from "@/components/Seo";
 
 const areas = [
   {
@@ -54,7 +55,7 @@ const areas = [
     id: "proteinuria-hematuria",
     title: "Investigação de Proteinúria e Hematúria (Glomerulopatias)",
     what: "Presença de proteína ou sangue na urina pode indicar doenças glomerulares que requerem investigação especializada.",
-    when: "Exames de urina alterados, edema, urina espumosa, perda de proteína detectada em exames laboratoriais.",
+    when: "Exames de urina alterados, albuminúria ou proteinúria detectada em exames laboratoriais, edema, urina espumosa.",
     how: "Avaliação clínica e laboratorial completa, com investigação direcionada para identificar a causa e definir o melhor tratamento.",
   },
   {
@@ -68,9 +69,12 @@ const areas = [
 
 const Areas = () => (
   <main className="pt-24">
+    <Seo path="/areas" />
+
     <section className="py-20">
       <div className="container mx-auto px-4">
         <SectionTitle
+          as="h1"
           title="Áreas de Atuação"
           subtitle="Conheça as condições que acompanho com dedicação e embasamento científico."
         />
@@ -81,18 +85,18 @@ const Areas = () => (
               id={area.id}
               className="bg-card rounded-lg p-8 border border-border shadow-sm scroll-mt-24"
             >
-              <h3 className="text-primary text-2xl font-serif font-semibold mb-6">{area.title}</h3>
+              <h2 className="text-primary text-2xl font-serif font-semibold mb-6">{area.title}</h2>
               <div className="space-y-5">
                 <div>
-                  <h4 className="text-purple-deep font-sans font-semibold text-sm uppercase tracking-wider mb-1">O que é</h4>
+                  <h3 className="text-purple-deep font-sans font-semibold text-sm uppercase tracking-wider mb-1">O que é</h3>
                   <p className="text-foreground text-sm leading-relaxed">{area.what}</p>
                 </div>
                 <div>
-                  <h4 className="text-purple-deep font-sans font-semibold text-sm uppercase tracking-wider mb-1">Quando procurar</h4>
+                  <h3 className="text-purple-deep font-sans font-semibold text-sm uppercase tracking-wider mb-1">Quando procurar</h3>
                   <p className="text-foreground text-sm leading-relaxed">{area.when}</p>
                 </div>
                 <div>
-                  <h4 className="text-purple-deep font-sans font-semibold text-sm uppercase tracking-wider mb-1">Como posso ajudar</h4>
+                  <h3 className="text-purple-deep font-sans font-semibold text-sm uppercase tracking-wider mb-1">Como posso ajudar</h3>
                   <p className="text-foreground text-sm leading-relaxed">{area.how}</p>
                 </div>
               </div>

@@ -1,17 +1,30 @@
 import { Link } from "react-router-dom";
-import { Heart, ShieldCheck, Brain, Microscope, MapPin } from "lucide-react";
+import {
+  Activity,
+  Brain,
+  Droplets,
+  FlaskConical,
+  Heart,
+  MapPin,
+  Microscope,
+  ShieldCheck,
+} from "lucide-react";
 import fotoHero from "@/assets/foto-hero.jpeg";
 import SectionTitle from "@/components/SectionTitle";
 import AppointmentButton from "@/components/AppointmentButton";
 import ClinicLocation from "@/components/ClinicLocation";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { professional } from "@/lib/professional";
 
 const areas = [
-  { icon: Heart, title: "Doença Renal Crônica", desc: "Acompanhamento especializado para preservação da função renal.", path: "/areas#drc" },
+  { icon: Heart, title: "Doença Renal Crônica", desc: "Tratamento e acompanhamento da doença renal crônica para preservar a função renal.", path: "/areas#drc" },
   { icon: Microscope, title: "Nefrolitíase", desc: "Investigação e prevenção de cálculos renais.", path: "/areas#nefrolitiase" },
   { icon: ShieldCheck, title: "Infecção Urinária de Repetição", desc: "Abordagem completa para infecções recorrentes.", path: "/areas#itu" },
   { icon: Brain, title: "Medicina Preventiva", desc: "Cuidado integral focado na prevenção.", path: "/areas#preventiva" },
+  { icon: Activity, title: "Hipertensão Arterial", desc: "Investigação de hipertensão arterial e do risco cardiovascular associado.", path: "/areas#hipertensao" },
+  { icon: Droplets, title: "Creatinina Elevada", desc: "Avaliação de creatinina elevada para identificar causa e gravidade.", path: "/areas#creatinina-elevada" },
+  { icon: FlaskConical, title: "Proteinúria e Hematúria", desc: "Investigação de albuminúria, proteinúria e sangue na urina.", path: "/areas#proteinuria-hematuria" },
 ];
 
 const timeline = [
@@ -31,16 +44,18 @@ const diferenciais = [
 const Index = () => {
   return (
     <main>
+      <Seo path="/" />
+
       {/* Hero */}
       <section id="apresentacao" className="bg-editorial-background pt-20">
         <div className="container mx-auto max-w-6xl px-4 py-10 md:py-14 lg:py-16">
           <div className="grid md:grid-cols-[minmax(0,1fr)_auto] items-center gap-8 md:gap-12 lg:gap-20">
             <div className="max-w-xl animate-fade-in">
               <p className="text-editorial-text font-sans text-xs font-medium mb-5">
-                Nefrologista em Rio Verde – GO
+                Clínica Médica e Nefrologia
               </p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-editorial-blue leading-tight mb-5">
-                {professional.name}
+                Dra. Beatriz Romanini — Nefrologista em Rio Verde
               </h1>
               <div className="text-xs text-editorial-text leading-relaxed mb-5">
                 <p className="font-semibold">{professional.crm}</p>
@@ -48,7 +63,9 @@ const Index = () => {
                 <p>Nefrologia — RQE {professional.specialties[1].rqe}</p>
               </div>
               <p className="text-editorial-text text-base leading-relaxed mb-7 max-w-md">
-                Medicina baseada em evidência com olhar humano e preventivo.
+                Medicina baseada em evidência com olhar humano e preventivo. Consulta com
+                nefrologista em Rio Verde para doença renal crônica, hipertensão arterial,
+                cálculos renais e prevenção de doenças.
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <AppointmentButton compact />
@@ -62,9 +79,12 @@ const Index = () => {
               <div>
                 <img
                   src={fotoHero}
-                   alt="Dra. Beatriz Romanini Fernandes – Nefrologista em Rio Verde – GO"
-                   className="w-52 md:w-60 lg:w-64 rounded-lg object-cover object-top aspect-[3/4]"
+                  alt="Dra. Beatriz Romanini Fernandes, nefrologista em Rio Verde – GO, em atendimento na Center Clínica"
+                  className="w-52 md:w-60 lg:w-64 rounded-lg object-cover object-top aspect-[3/4]"
+                  width={640}
+                  height={960}
                   loading="eager"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -77,7 +97,10 @@ const Index = () => {
       {/* Áreas de Atuação */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
-          <SectionTitle title="Áreas de Atuação" subtitle="Cuidado especializado em nefrologia e saúde integral." />
+          <SectionTitle
+            title="Áreas de Atuação"
+            subtitle="Atendimento com especialista em rins em Rio Verde — da prevenção ao acompanhamento das doenças renais."
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {areas.map((area) => (
               <Link

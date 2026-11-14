@@ -1,6 +1,7 @@
 import SectionTitle from "@/components/SectionTitle";
 import fotoSobre from "@/assets/foto-sobre.jpeg";
 import AppointmentButton from "@/components/AppointmentButton";
+import Seo from "@/components/Seo";
 import { professional } from "@/lib/professional";
 
 const timeline = [
@@ -13,17 +14,22 @@ const timeline = [
 
 const Sobre = () => (
   <main className="pt-24">
+    <Seo path="/sobre" />
+
     {/* Bio */}
     <section className="py-20">
       <div className="container mx-auto px-4 max-w-4xl">
-        <SectionTitle title="Sobre Mim" />
+        <SectionTitle title="Sobre Mim" as="h1" />
         <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="shrink-0">
             <img
               src={fotoSobre}
-              alt="Dra. Beatriz Romanini Fernandes no Hospital Albert Einstein"
+              alt="Dra. Beatriz Romanini Fernandes, nefrologista em Rio Verde – GO, em ambiente clínico"
               className="w-56 md:w-64 rounded-2xl shadow-md object-cover aspect-[3/4]"
+              width={900}
+              height={600}
               loading="lazy"
+              decoding="async"
             />
           </div>
           <div>

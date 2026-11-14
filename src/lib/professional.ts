@@ -17,7 +17,7 @@ export const professional = {
   appointmentUrl: "https://wa.me/5564984033031?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Beatriz%20Romanini.",
   instagram: "@beatrizromanini.nefro",
   instagramUrl: "https://www.instagram.com/beatrizromanini.nefro/",
-  siteUrl: "https://beatrizromanini-nefrologia.lovable.app",
+  siteUrl: "https://drabeatriznefrologia.com",
 } as const;
 
 export const fullAddress = `${professional.street}, ${professional.neighborhood}, ${professional.city} – ${professional.state}, CEP ${professional.postalCode}`;

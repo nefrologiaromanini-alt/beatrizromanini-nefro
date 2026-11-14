@@ -3,22 +3,28 @@ import SectionTitle from "@/components/SectionTitle";
 import fotoContato from "@/assets/foto-contato.jpeg";
 import AppointmentButton from "@/components/AppointmentButton";
 import ClinicLocation from "@/components/ClinicLocation";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { professional } from "@/lib/professional";
 
 const Contato = () => {
   return (
     <main className="pt-24">
+      <Seo path="/contato" />
+
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-3xl">
-          <SectionTitle title="Contato" subtitle="Entre em contato para agendar sua consulta." />
+          <SectionTitle as="h1" title="Contato" subtitle="Entre em contato para agendar sua consulta." />
           <div className="flex flex-col md:flex-row gap-10 items-start">
             <div className="hidden md:block shrink-0">
               <img
                 src={fotoContato}
-              alt="Dra. Beatriz Romanini Fernandes"
+                alt="Dra. Beatriz Romanini Fernandes em atendimento no consultório em Rio Verde – GO"
                 className="w-52 rounded-2xl shadow-md object-cover aspect-[3/4] sticky top-28"
+                width={640}
+                height={960}
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="flex-1 max-w-xl">
