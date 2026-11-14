@@ -1,18 +1,12 @@
-import { useState } from "react";
-import { MessageCircle, Send } from "lucide-react";
+import { Instagram, Phone } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
-import { toast } from "sonner";
 import fotoContato from "@/assets/foto-contato.jpeg";
+import AppointmentButton from "@/components/AppointmentButton";
+import ClinicLocation from "@/components/ClinicLocation";
+import { Button } from "@/components/ui/button";
+import { professional } from "@/lib/professional";
 
 const Contato = () => {
-  const [form, setForm] = useState({ nome: "", email: "", cidade: "", mensagem: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Mensagem enviada com sucesso! Retornaremos em breve.");
-    setForm({ nome: "", email: "", cidade: "", mensagem: "" });
-  };
-
   return (
     <main className="pt-24">
       <section className="py-20">
@@ -22,63 +16,20 @@ const Contato = () => {
             <div className="hidden md:block shrink-0">
               <img
                 src={fotoContato}
-                alt="Dra. Beatriz Romanini"
+              alt="Dra. Beatriz Romanini Fernandes"
                 className="w-52 rounded-2xl shadow-md object-cover aspect-[3/4] sticky top-28"
                 loading="lazy"
               />
             </div>
             <div className="flex-1 max-w-xl">
 
-          <form onSubmit={handleSubmit} className="space-y-5">
-            {[
-              { label: "Nome", name: "nome", type: "text" },
-              { label: "E-mail", name: "email", type: "email" },
-              { label: "Cidade", name: "cidade", type: "text" },
-            ].map((field) => (
-              <div key={field.name}>
-                <label className="block text-sm font-sans font-medium text-foreground mb-1.5">
-                  {field.label}
-                </label>
-                <input
-                  type={field.type}
-                  required
-                  value={form[field.name as keyof typeof form]}
-                  onChange={(e) => setForm({ ...form, [field.name]: e.target.value })}
-                  className="w-full px-4 py-3 rounded-md border border-border bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 transition"
-                />
-              </div>
-            ))}
-            <div>
-              <label className="block text-sm font-sans font-medium text-foreground mb-1.5">
-                Mensagem
-              </label>
-              <textarea
-                required
-                rows={4}
-                value={form.mensagem}
-                onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
-                className="w-full px-4 py-3 rounded-md border border-border bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 transition resize-none"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-md bg-accent text-accent-foreground font-sans font-medium text-sm hover:opacity-90 transition-opacity"
-            >
-              <Send size={16} />
-              Enviar mensagem
-            </button>
-          </form>
-
-          <div className="mt-8 text-center">
-            <a
-              href="https://wa.me/55119700842045"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md border border-primary text-primary font-sans font-medium text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
-            >
-              <MessageCircle size={18} />
-              Falar no WhatsApp
-            </a>
+          <div className="space-y-5">
+            <h2 className="text-2xl font-semibold">Agendamento de consultas</h2>
+            <p className="text-foreground">{professional.clinic} · Rio Verde – GO</p>
+            <AppointmentButton className="w-full" />
+            <p className="text-sm text-muted-foreground text-center">WhatsApp: {professional.whatsapp}</p>
+            <Button asChild variant="outline" size="lg" className="w-full border-primary text-primary"><a href={professional.phoneHref}><Phone aria-hidden="true" />{professional.phone}</a></Button>
+            <a href={professional.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary text-sm hover:underline"><Instagram size={18} aria-hidden="true" />{professional.instagram}</a>
           </div>
 
           <p className="mt-8 text-center text-xs text-muted-foreground/70">
@@ -89,6 +40,7 @@ const Contato = () => {
           </div>
         </div>
       </section>
+      <ClinicLocation />
     </main>
   );
 };

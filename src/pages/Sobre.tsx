@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import SectionTitle from "@/components/SectionTitle";
-import { CalendarCheck } from "lucide-react";
 import fotoSobre from "@/assets/foto-sobre.jpeg";
+import AppointmentButton from "@/components/AppointmentButton";
+import { professional } from "@/lib/professional";
 
 const timeline = [
   { year: "2014–2019", text: "Graduação em Medicina – Faculdade de Medicina de Jundiaí" },
@@ -21,12 +21,14 @@ const Sobre = () => (
           <div className="shrink-0">
             <img
               src={fotoSobre}
-              alt="Dra. Beatriz Romanini no Hospital Albert Einstein"
+              alt="Dra. Beatriz Romanini Fernandes no Hospital Albert Einstein"
               className="w-56 md:w-64 rounded-2xl shadow-md object-cover aspect-[3/4]"
               loading="lazy"
             />
           </div>
           <div>
+            <h2 className="text-2xl font-semibold mb-3">{professional.name}</h2>
+            <p className="text-sm text-primary mb-6">{professional.crm}<br />Clínica Médica — RQE {professional.specialties[0].rqe}<br />Nefrologia — RQE {professional.specialties[1].rqe}</p>
             <p className="text-foreground leading-relaxed mb-6">
               Sou médica nefrologista com formação pelo Hospital Israelita Albert Einstein e título de
               especialista pela Sociedade Brasileira de Nefrologia. Minha prática combina rigor científico
@@ -87,13 +89,7 @@ const Sobre = () => (
     <section className="py-16 bg-secondary text-center">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-serif font-semibold text-primary mb-4">Vamos cuidar da sua saúde juntos?</h2>
-        <Link
-          to="/contato"
-          className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-accent text-accent-foreground font-sans font-medium text-sm hover:opacity-90 transition-opacity"
-        >
-          <CalendarCheck size={18} />
-          Agendar consulta
-        </Link>
+        <AppointmentButton />
       </div>
     </section>
   </main>
