@@ -9,7 +9,7 @@ const ClinicLocation = () => {
   return (
     <section id="onde-atender" className="bg-secondary/40 py-16 lg:py-20 scroll-mt-24">
       <div className="container mx-auto px-4 max-w-6xl">
-        <SectionTitle title="Onde atender" subtitle="Nefrologia e Clínica Médica em Rio Verde – GO." />
+        <SectionTitle title="Local de Atendimentos" subtitle="Nefrologia e Clínica Médica em Rio Verde – GO." />
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">{professional.clinic}</h3>
@@ -18,7 +18,7 @@ const ClinicLocation = () => {
               <div>{professional.street}<br />{professional.neighborhood}<br />{professional.city} – {professional.state}<br />CEP {professional.postalCode}</div>
             </address>
             <a href={professional.phoneHref} className="inline-flex items-center gap-3 text-primary hover:underline"><Phone size={18} aria-hidden="true" />{professional.phone}</a>
-            <p className="text-sm text-muted-foreground">WhatsApp para agendamentos: {professional.whatsapp}</p>
+            <a href={professional.appointmentUrl} target="_blank" rel="noopener noreferrer" className="block w-fit py-2 text-sm text-primary underline underline-offset-4 hover:text-accent">WhatsApp para agendamentos: {professional.whatsapp}</a>
             <div className="flex flex-col sm:flex-row gap-3">
               <AppointmentButton />
               <Button asChild variant="outline" size="lg" className="border-primary text-primary">

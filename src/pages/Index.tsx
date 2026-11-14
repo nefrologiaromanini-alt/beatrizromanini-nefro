@@ -60,7 +60,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <AppointmentButton />
                 <Button asChild variant="outline" size="lg" className="border-primary text-primary">
-                  <a href="#onde-atender"><MapPin aria-hidden="true" />Onde atender</a>
+                  <a href="#onde-atender"><MapPin aria-hidden="true" />Local de Atendimentos</a>
                 </Button>
               </div>
               <p className="mt-4 text-sm text-muted-foreground">{professional.clinic} · {professional.city} – {professional.state}</p>
